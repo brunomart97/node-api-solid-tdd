@@ -11,8 +11,8 @@ export class Student extends Entity<StudentProps> {
   }
 
   static create(props: StudentProps, id?: string) {
-    const correction = new Student(props, id);
+    const student = new Student(props, id);
 
-    return correction;
+    return student;
   }
 }

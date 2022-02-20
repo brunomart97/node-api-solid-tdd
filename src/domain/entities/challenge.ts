@@ -11,8 +11,8 @@ export class Challenge extends Entity<ChallengeProps> {
   }
 
   static create(props: ChallengeProps, id?: string) {
-    const correction = new Challenge(props, id);
+    const challenge = new Challenge(props, id);
 
-    return correction;
+    return challenge;
   }
 }

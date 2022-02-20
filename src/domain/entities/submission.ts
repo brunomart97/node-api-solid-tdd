@@ -3,7 +3,7 @@ import { Entity } from '../../core/domain/Entity';
 type SubmissionProps = {
   challengeId: string;
   studentId: string;
-  createdAt: Date;
+  createdAt?: Date;
 };
 
 export class Submission extends Entity<SubmissionProps> {
@@ -12,8 +12,11 @@ export class Submission extends Entity<SubmissionProps> {
   }
 
   static create(props: SubmissionProps, id?: string) {
-    const correction = new Submission(props, id);
+    const submission = new Submission({
+      ...props,
+      createdAt: props.createdAt ?? new Date()
+    }, id);
 
-    return correction;
+    return submission;
   }
 }
