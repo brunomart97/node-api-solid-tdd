@@ -186,7 +186,10 @@ export default {
           keepClassNames: true,
           transform: {
             legacyDecorator: true,
-            decoratorMetaData: true,
+            decoratorMetadata: true,
+            react: {
+              runtime: 'automatic'
+            },
           },
         },
         module: {
